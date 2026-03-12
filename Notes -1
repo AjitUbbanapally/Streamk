@@ -1,0 +1,4 @@
+hk
+Kafka encourages us to think about EVENTS (i.e the things that happen at a specific point of time)
+Events form the backbone of contemporary data systems and kafka is the infrastructure used to manage them.
+-- kafka is focussed on processing events in realtime.  distributed event processing. 
