@@ -2,3 +2,10 @@ hk
 Kafka encourages us to think about EVENTS (i.e the things that happen at a specific point of time)
 Events form the backbone of contemporary data systems and kafka is the infrastructure used to manage them.
 -- kafka is focussed on processing events in realtime.  distributed event processing. 
+Kafka track logs of events. These logs are called the topics. So, they just do not consist of present state, but includes the history of values over a period 
+of time. 
+The messages in topics are immutable
+
+We can create database schemas that model this.
+tables, relational databaases do not do this so well with log type use cases
+
