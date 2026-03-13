@@ -9,3 +9,9 @@ The messages in topics are immutable
 We can create database schemas that model this.
 tables, relational databaases do not do this so well with log type use cases
 
+So, kafka uses log files instead of tables. We call them messages. These logs are called topics in kafka.
+Kafka is schemaless. Messages are just bytes of data.
+With immutable topic, we can absolutely transform it.
+
+Topic is not a queue. its a log.
+
