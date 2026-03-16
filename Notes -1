@@ -14,4 +14,9 @@ Kafka is schemaless. Messages are just bytes of data.
 With immutable topic, we can absolutely transform it.
 
 Topic is not a queue. its a log.
+Kafka is composed of network of machines, called BROKERS. 
+
+We would need kafka brokers in conventional systems. 
+If we are using kafka in confluent cloud , we do not need any kafka server.
+Brokers are responsible to write incoming messages, 
 
