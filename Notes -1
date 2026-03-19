@@ -12,14 +12,25 @@ tables, relational databaases do not do this so well with log type use cases
 So, kafka uses log files instead of tables. We call them messages. These logs are called topics in kafka.
 Kafka is schemaless. Messages are just bytes of data.
 With immutable topic, we can absolutely transform it.
+HK we have ordering within each partition. By dividing topics into partitions.
+We can assign a key and do a hash funtion such that every time the same key gets into a same partition within a given topic. 
+
 
 Topic is not a queue. its a log.
 Kafka is composed of network of machines, called BROKERS. 
 
 We would need kafka brokers in conventional systems. 
-If we are using kafka in confluent cloud , we do not need any kafka server.
+If we are using kafka in confluent cloud (serverless architecture) , we do not need any kafka server.So, we do not need any brokers.
+Zoo keeper is used to manage kafka brokers. Zookeeper has to be installed first before installing kafka.
 Brokers are responsible to write incoming messages, 
 
-Log compaction - keeps only the latest values per key.
+Same Broker can have different topics and different partition numbers. Brokers are responsible for replication . 
+earlier Zoo keeper was used and it ensures consistent view of metadata.
+Now, brokers provide the metadata functionality themselves using KRAFT.
+
+
+Log compaction - keeps only the latest values per key. Each broker is running kafka server process.
+
+
 
 
